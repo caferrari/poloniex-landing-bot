@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  bot:
+    image: caferrari/poloniexlendingbot
+    restart: always
+    volumes:
+      - ./config:/config
+      - ./market_data:/poloniexlendingbot-master/market_data
+    ports:
+      - 8000:8000
